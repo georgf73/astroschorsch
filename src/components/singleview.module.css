@@ -1,0 +1,33 @@
+.mainimagecontainer {
+  position: relative;
+  text-align: left;
+  color: white;
+}
+
+
+.imagetitle__bottomrightbox {
+    background-color: rgba(0,0,0,0.4);
+    padding:15px;
+  position: absolute;
+  bottom: 5%;
+  right: 5%;
+  max-width: 150px
+}
+
+.imagetitle__text {
+    font-size: 1.5rem;
+    color: rgba(255,255,255,1);
+    opacity: 100%
+}
+
+.maincontent {
+    margin: 20px;
+    text-align: left;
+    color: white;
+}
+
+.maincontent h4 {
+    text-align: left;
+    color: grey;
+}
+

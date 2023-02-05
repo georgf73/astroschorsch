@@ -1,0 +1,26 @@
+.objectListItem {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem;
+    margin: 1rem 0;
+
+    width: 350px;
+}
+
+.objectListItem__description {
+  max-width: 300px;
+    padding: 1rem;
+    margin: 1rem;
+}
+
+.close,
+.edit {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  cursor: pointer;
+  background: none;
+  border: none;
+}
