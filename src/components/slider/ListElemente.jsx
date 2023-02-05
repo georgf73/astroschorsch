@@ -33,7 +33,7 @@ var q = null;
 if(!filterfeld) { 
   q = query(
     elementeRef,
-    orderBy('brennweite','desc'),
+    orderBy(sortierung,'desc'),
   limit(10) )
  }
  if(filterfeld) {

@@ -7,6 +7,7 @@ import Profile from "./pages/Profile";
 import Aufnahmen from "./pages/Aufnahmen";
 import ForgotPassword from "./pages/ForgotPassword";
 import CreateImage from "./pages/CreateImage";
+import CreateObject from "./pages/CreateObject"
 import Objects from "./pages/Objects";
 import 'react-toastify/dist/ReactToastify.css';
 import PrivateRoute from "./components/PrivateRoute";
@@ -29,6 +30,7 @@ function App() {
           <Route path="/aufnahmen" element={<Aufnahmen />} />
           <Route path="/forgot-password" element={<ForgotPassword />} />
           <Route path="/create-image" element={<CreateImage />} />
+          <Route path="/create-object" element={<CreateObject />} />
         </Routes>
       </Router>
       <ToastContainer />
