@@ -88,6 +88,12 @@ const Profile = () => {
 <MdKeyboardArrowRight size="36px" />
 
         </Link>
+        <Link to='/create-object' className="createImage">
+<MdCameraEnhance size="36px" />
+<p>Ein neues Object einstellen</p>
+<MdKeyboardArrowRight size="36px" />
+
+        </Link>
 
       </main>
     </div>
