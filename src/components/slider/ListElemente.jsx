@@ -83,7 +83,7 @@ if(direction ==="right") {
       <div className="wrapper">
         <MdArrowBackIosNew className='sliderArrow left' onClick={() => handleDirectionClick("left")}/>
         <div className="container" ref={listRef}>
-          {elemente.map((element) => <ListItem key={element.id} name={element.data.name} image={element.data.imgUrls}/>)}
+          {elemente.map((element) => <ListItem key={element.id} imgid={element.id} name={element.data.name} image={element.data.imgUrls} tabelle={tabelle}/>)}
         </div>
         <MdArrowForwardIos className="sliderArrow right" onClick={() => handleDirectionClick("right")}/>
       </div> 
