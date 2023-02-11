@@ -20,7 +20,8 @@ function Header() {
     <header className="siteheader">
       <div className="container">
         <div className="left">
-          <h2 className="logo">Astroschorsch</h2>
+          <Link to="/" style={{ color: '#FFF', textDecoration: 'none' }}><h2 className="logo">Astroschorsch</h2></Link>
+          
           <Link to='/objects' style={{ color: '#FFF', textDecoration: 'none' }}><span>Objekte</span></Link>
           <Link to='/aufnahmen' style={{ color: '#FFF', textDecoration: 'none' }}><span>Bilder</span></Link>
           <span>Tutorials</span>

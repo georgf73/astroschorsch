@@ -1,14 +1,8 @@
 import { useState, useEffect, useRef } from "react";
 import { getAuth, onAuthStateChanged } from "firebase/auth";
-import {
-  getStorage,
-  ref,
-  uploadBytesResumable,
-  getDownloadURL,
-} from "firebase/storage";
+
 import { addDoc, collection, serverTimestamp } from "firebase/firestore";
 import { db } from "../firebase.config";
-import { v4 as uuidv4 } from "uuid";
 import { useNavigate } from "react-router-dom";
 import Spinner from "../components/UI/Spinner";
 import Header from "../components/Header";
@@ -26,7 +20,7 @@ const CreateImage = () => {
     entfernung: 0,
   });
 
-  const { klasse, art, katalogId, name, beschreibung, entfernung, bildUrl } =
+  const { klasse, art, katalogId, name, beschreibung, entfernung } =
     formData;
 
   const auth = getAuth();
@@ -45,7 +39,7 @@ const CreateImage = () => {
     return () => {
       isMounted.current = false;
     };
-  }, [isMounted]);
+  }, [isMounted, auth]);
 
   const onSubmit = async (e) => {
     e.preventDefault();

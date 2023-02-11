@@ -8,7 +8,6 @@ import {
   where,
   orderBy,
   limit,
-  startAfter,
 } from "firebase/firestore";
 import { db } from "../../firebase.config";
 import { toast } from "react-toastify";
@@ -22,6 +21,7 @@ const ListElemente = ({tabelle, sortierung, titel, filterfeld, filterwert}) => {
   const listRef = useRef()
   const [elemente, setElemente] = useState(null)
   const [loading,setLoading] =  useState(true)
+  const [isMoving, setIsMoving] = useState(false)
 
 useEffect(() => {
   const fetchElemente = async () => {
@@ -63,16 +63,20 @@ if(!filterfeld) {
  
 
 fetchElemente()
-},[])
+},[filterfeld,filterwert,sortierung,tabelle])
 
   const handleDirectionClick = (direction) => {
-    let distance = listRef.current.getBoundingClientRect().x - 50;
-if(direction ==="left") {
-  listRef.current.style.transform = `translateX(${230 + distance}px)`
-}
-if(direction ==="right") {
-  listRef.current.style.transform = `translateX(${-230 + distance}px)`
-}
+    if(!isMoving) {
+      setIsMoving(true)
+      let distance = listRef.current.getBoundingClientRect().x - 50;
+      if(direction ==="left") {
+      listRef.current.style.transform = `translateX(${234 + distance}px)`
+      }
+      if(direction ==="right") {
+      listRef.current.style.transform = `translateX(${-234 + distance}px)`
+      }
+      setIsMoving(false)
+   } 
   }
 
   return (  

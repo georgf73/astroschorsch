@@ -39,7 +39,7 @@ const Statistics = () => {
 
   return (
     <div>
-        <table>
+        <table className="statistiktabelle">
             <tr colspan="2">
                 <td>
                 <b>Statistik</b>

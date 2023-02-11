@@ -1,7 +1,6 @@
 import {useState, useEffect} from 'react'
-import { useNavigate, useParams } from 'react-router-dom'
+import { useParams } from 'react-router-dom'
 import { getDoc, doc } from 'firebase/firestore'
-import { getAuth } from 'firebase/auth'
 import { db } from '../firebase.config'
 import Header from '../components/Header'
 import Spinner from '../components/UI/Spinner'
@@ -13,7 +12,7 @@ const Aufnahme = () => {
     const [object, setObject] = useState(null)
     
     
-const navigate = useNavigate()
+
 const params = useParams()
 
 useEffect(() => {
@@ -38,7 +37,7 @@ if(!loading) {
 
         <div className='Object'>
             <Header />
-            <img src={object.imgUrls} width="100%"/>
+            <img src={object.imgUrls} width="100%" alt='objecttitle'/>
             <h4>{object.katalogId}</h4>
         </div>
       )
