@@ -1,5 +1,5 @@
 :root{
-  --main-color: #0b0b0b
+  --main-color: #000000;
 }
 
 .App {
@@ -59,4 +59,22 @@
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.toparea {
+  display: flex;
+
+  .mainimage {
+    width: 100%;
+  }
+}
+
+.bottomarea {
+  color: white;
+  max-width: 800px;
+  margin-left: 20px;
+}
+
+.maintitle {
+  text-align: center;
 }
